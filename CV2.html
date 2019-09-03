@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <style>
-            * {
-                border: 1px solid red;
-            }
+            /**   {  
+                 border: 1px solid red; 
+            } */
             body {
-                font-weight: bold;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-family: 'Helvetica', sans-serif;
+                font-size: 16px;
             }
             .header {
                 height: 14rem;
@@ -20,14 +20,37 @@
                 color: white;
             }
             img {
-                border-radius: 10px;
+                border-radius: 50%;
             }
             .main {
                 height: 60rem;
+                color: white;
             }
-            .A, .B, .C, .D, .E, .F, .G, .H {
+            /*.A, .B, .C, .D, .E, .F, .G, .H {
                 border: 1px dashed purple;
-                height: 15vw;
+            }*/
+            h3 {
+                text-align: center;
+                margin: 0 auto;
+            }
+            .left-col {
+                background-color: #1fab89;
+            }
+            .mid-col {
+                background-color: #ff8080;
+            }
+            .right-col {
+                background-color: #ffba92;
+            }
+            blockquote {
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 40px;
+                margin-inline-end: 40px;
+            }
+            .table, .table td {
+                color: white;
+                border: 0;
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,21 +61,70 @@
         <div class="container-fluid">
             <div class="row header">
                 <div class="col-sm-3"><img src="blank.png"></div>
-                <div class="col-sm-9 my-auto">LÊ THANH LIÊM</div>
+                <div class="col-sm-9 my-auto">
+                    <h1>LÊ THANH LIÊM</h1>
+                    <h6>Web Developer</h6>
+                </div>
             </div>
         </div>
         <div class="container-fluid">
             <div class="row main">
-                <div class="col-sm d-flex flex-column justify-content-around">
-                    <div class="row A">Address & Phone</div>
-                    <div class="row B">Ex-employer</div>
+                <div class="col-sm d-flex flex-column justify-content-around left-col">
+                    <div class="row A">
+                        <div class="col-sm A1">
+                            <p><img style="margin-right:1em;"src="home-5-24.ico">330/6A Lê Hồng Phong, Quận 10, TP. Hồ Chí Minh</p>
+                            <p><img style="margin-right:1em;"src="mobile-phone-8-24.ico">+840775697649</p>
+                            <p><img style="margin-right:1em;"src="email-24.ico">liem.lt@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="row B">
+                        <div class="col-sm B1">
+                        <h3>NGƯỜI LIÊN HỆ</h3>
+                        HỌ TÊN:
+                        <blockquote>NGUYỄN VĂN A</blockquote>
+                        CHỨC VỤ:
+                        <blockquote>Director</blockquote>
+                        CÔNG TY:
+                        <blockquote>SAGS</blockquote>
+                        ĐIỆN THOẠI:
+                        <blockquote>0939 968969</blockquote>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm d-flex flex-column justify-content-around">
-                    <div class="row C">Personal Info</div>
+                <div class="col-sm d-flex flex-column justify-content-around mid-col">
+                    <div class="row C">
+                        <h3>THÔNG TIN CÁ NHÂN</h3>
+                        <table class="table">
+                            <tr>
+                              <td>Ngày sinh:</td>
+                              <td>12/05/1994</td>
+                            </tr>
+                            <tr>
+                              <td>Quốc tịch:</td>
+                              <td>Việt Nam</td>
+                            </tr>
+                            <tr>
+                              <td>Cấp bậc:</td>
+                              <td>Fresher</td>
+                            </tr>
+                            <tr>
+                              <td>Kinh nghiệm:</td>
+                              <td>3 tháng</td>
+                            </tr>
+                            <tr>
+                              <td>Giới tính:</td>
+                              <td>Nam</td>
+                            </tr>
+                            <tr>
+                              <td>Hôn nhân:</td>
+                              <td>Độc thân</td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="row D">Professional Aim</div>
                     <div class="row E">Experience</div>
                 </div>
-                <div class="col-sm d-flex flex-column justify-content-around">
+                <div class="col-sm d-flex flex-column justify-content-around right-col">
                     <div class="row F">Language Efficiency</div>
                     <div class="row G">Skills</div>
                     <div class="row H">Qualification</div>
