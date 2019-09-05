@@ -74,14 +74,66 @@
                 border: 0;
                 padding-left: 0;
             }
+            .clock {
+                margin: 0 auto;
+                padding: 1em;
+            }
+            ul {
+                margin: 0 auto;
+                padding: 0px;
+                list-style: none;
+                text-align: center;
+            }
+            ul li {
+                display: inline;
+                font-size: 2.5em;
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+            }
+            #point {
+                position: relative;
+                animation: mymove 1s ease infinite;
+                padding-left: 0.2em;
+                padding-right: 0.2em;
+            }
+            @keyframes mymove {
+                0% {
+                    opacity: 1.0;
+                }
+            
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1.0;
+                }	
+            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script>
-                $(window).on('load',function() {
-                     $('.preloader').fadeOut(4000);
-                });
+            $(window).on('load',function() {
+                 $('.preloader').fadeOut(4000);
+            });
+            $(document).ready(function() {
+        
+            setInterval( function() {
+                var seconds = new Date().getSeconds();
+                $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+                },1000);
+            
+            setInterval( function() {
+                var minutes = new Date().getMinutes();
+                $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+                },1000);
+            
+            setInterval( function() {
+                var hours = new Date().getHours();
+                $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+                }, 1000);
+            });
         </script>
     </head>
     <body>
@@ -89,9 +141,18 @@
         <div class="container-fluid">
             <div class="row header">
                 <div class="col-sm-3"><img src="blank.png"></div>
-                <div class="col-sm-9 my-auto">
+                <div class="col-sm-6 my-auto">
                     <h1>LÊ THANH LIÊM</h1>
                     <h6>Web Developer</h6>
+                </div>
+                <div class="clock col-sm-3 my-auto">
+                    <ul>
+                        <li id="hours"></li>
+                        <li id="point">:</li>
+                        <li id="min"></li>
+                        <li id="point">:</li>
+                        <li id="sec"></li>
+                </ul>
                 </div>
             </div>
         </div>
